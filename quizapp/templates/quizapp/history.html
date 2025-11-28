@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-xl font-bold mb-4">My Quiz History</h1>
+
+<ul>
+    {% for s in submissions %}
+        <li class="p-3 bg-white rounded shadow mb-2">
+            {{ s.quiz.title }} — Score: {{ s.score }} — {{ s.submitted_at }}
+        </li>
+    {% empty %}
+        <p>No attempts yet.</p>
+    {% endfor %}
+</ul>
+{% endblock %}

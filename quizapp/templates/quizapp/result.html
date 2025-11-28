@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">Your Result</h1>
+
+<div class="p-6 bg-white shadow rounded">
+    <p class="text-lg"><b>Name:</b> {{ submission.user_name }}</p>
+    <p class="text-lg"><b>Quiz:</b> {{ submission.quiz.title }}</p>
+    <p class="text-lg"><b>Score:</b> {{ submission.score }}</p>
+</div>
+{% endblock %}
